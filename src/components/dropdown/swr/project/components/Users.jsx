@@ -1,6 +1,7 @@
 import React from 'react';
 import { useUser } from '../services/queries';
 import { Link } from 'react-router-dom';
+import NavBar from './NavBar';
 
 const Userzz = () => {
     const { data, error, isLoading } = useUser();
@@ -12,6 +13,7 @@ const Userzz = () => {
 
     return (
         <div>
+            <NavBar/>
             <h1>Users</h1>
             {data?.users?.length > 0 ? (
                 <ul>
